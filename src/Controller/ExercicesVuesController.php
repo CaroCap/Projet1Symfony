@@ -59,7 +59,7 @@ class ExercicesVuesController extends AbstractController{
         return $this->render('exercices_vue/exercice5.html.twig',$monArray);
     }
 
-    #[Route('/exercices/vue/ex6')]
+    #[Route('/exercices/vue/ex6', name:'dateAjd')]
     public function afficherDateAujourdhui()
     {
         $dateAujourdhui = new DateTime();
@@ -71,6 +71,21 @@ class ExercicesVuesController extends AbstractController{
     {
         $prixDouble = $objetRequest->get('prix')*2;
 
-        return $this->render('exercices_vue/exerciceIF.html.twig', ["prix"=>$prixDouble]);
+        return $this->render('exercices_vue/exercice_if.html.twig', ["prix"=>$prixDouble]);
+    }
+
+    #[Route('/exercices/vue/exBoucle')]
+    public function boucleMoi()
+    {
+        $monArray = [
+            "Perso1" => [
+                "nom"=>"Cap",
+                "prenom"=>"Caroline"],
+            "Perso2"=>[
+                "nom"=>"Decarpentrie",
+                "prenom"=>"Alexis"]
+            ];
+
+        return $this->render('exercices_vue/exercice_boucles.html.twig',["monArray"=>$monArray]);
     }
 }

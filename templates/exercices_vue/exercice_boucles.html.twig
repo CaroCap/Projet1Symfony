@@ -1,0 +1,26 @@
+{% extends 'exercices_vue/base_vues.html.twig' %}
+
+{% block titre %}
+<h1>
+Exercice Boucles
+</h1>
+{% endblock %}
+
+{% block enonce %}
+<p>
+    Créer une boucle dans la vue pour afficher les données de mon array envoyé en paramètre du controller.
+</p>
+{% endblock %}
+
+{% block retour %}
+    <p>
+    {% for item in monArray %}
+    {# item = Perso1, Perso2 #}
+        {% for cle, valeur in item %}
+            {{cle | capitalize}} : {{valeur}}<br><br> 
+            {# cle = nom, prenom (capitalize = filtre pour mettre première lettre en MAJ) //  valeur = Cap, Decarpentrie #}
+        {% endfor %}
+        <br>
+    {% endfor %}
+    </p>
+{% endblock %}
