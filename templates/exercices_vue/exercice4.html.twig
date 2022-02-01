@@ -1,0 +1,30 @@
+{% extends 'exercices_vue/base_vues.html.twig' %}
+
+{% block titre %}
+<h1>
+Exercice 4
+</h1>
+{% endblock %}
+
+{% block enonce %}
+4. Créez une nouvelle version de l'exercice précédent où la liste de villes est envoyée depuis le controller à la vue dans un array
+
+{% endblock %}
+
+{% block retour %}
+    {# <p>Voici les villes:
+    <ul>
+        <li>{{ville1}}</li>
+        <li>{{ville2}}</li>
+        <li>{{ville3}}</li>
+    </ul>
+    </p> #}
+
+    <p>Voici les villes:
+    <ul>
+        <li>{{villes[0]}}</li>
+        <li>{{villes[1]}}</li>
+        <li>{{villes[2]}}</li>
+    </ul>
+    </p>
+{% endblock %}

@@ -13,8 +13,14 @@
         {% endblock %}
     </head>
     <body>
-        <h1>Test du layout de base</h1>
-        {% block body %}{% endblock %}
+        {% block titre %}{% endblock %}
+
+        <h2>Énoncé</h2>
+        {% block enonce %}{% endblock %}
+
+        <h4>Résultat</h4>
+        {% block retour %}{% endblock %}
+        
     </body>
 </html>
 

@@ -1,0 +1,16 @@
+{% extends 'exercices_vue/base_vues.html.twig' %}
+
+{% block titre %}
+<h1>
+Exercice 3
+</h1>
+{% endblock %}
+
+{% block enonce %}
+3. Créez une nouvelle action qui affiche un array de trois villes belges. Les villes sont fixées et se trouvent dans la vue, ne sont pas envoyées par le controller à la vue.
+{% endblock %}
+
+{% block retour %}
+    {{ "Voici les villes:
+    \nBruxelles\nNamur\nCharleroi" |nl2br }} 
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'exercices_vue/base_vues.html.twig' %}
+
+{% block titre %}
+<h1>
+Exercice 5
+</h1>
+{% endblock %}
+
+{% block enonce %}
+Créez une nouvelle version de l'exercice 4. Cette fois l'action reçoit la langue d'affichage dans l'URL (FR ou NL). Le choix de la langue se fait grâce à un paramètre reçu par l'action.
+{% endblock %}
+
+{% block retour %}
+    <p>Voici les villes:
+    <ul>
+        <li>{{villes[0]}}</li>
+        <li>{{villes[1]}}</li>
+        <li>{{villes[2]}}</li>
+    </ul>
+    </p>
+
+{% endblock %}

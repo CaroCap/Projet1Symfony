@@ -1,0 +1,25 @@
+{% extends 'exercices_vue/base_vues.html.twig' %}
+
+{% block titre %}
+<h1>
+Exercice 1 et 2
+</h1>
+{% endblock %}
+
+{% block enonce %}
+1. Créez une nouvelle action afficheTvacTwig qui reçoit une valeur d'un prix dans l'URL et une valeur de TVA et calcule le prix Tvac. Créez un twig qui affiche "Le prix TVAC est xxx"
+<br><br>
+2. Créez une nouvelle version de l'exercice précédent qui puisse afficher "Le prix xxxx euros avec le taux de TVA de xxxx % est x xxx"
+{% endblock %}
+
+{% block retour %}
+    <p>Calcul depuis la vue {{prix * (1 + tva / 100)}}</p>
+
+    <p>
+        1. Le prix TVAC est {{prixTVAC}}€
+    </p>
+
+    <p>
+        2. Le prix {{prix}} euros avec le taux de TVA de {{tva}}% est {{prixTVAC}}€
+    </p>
+{% endblock %}

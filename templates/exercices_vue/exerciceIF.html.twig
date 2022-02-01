@@ -1,0 +1,27 @@
+{% extends 'exercices_vue/base_vues.html.twig' %}
+
+{% block titre %}
+<h1>
+Exercice IF
+</h1>
+{% endblock %}
+
+{% block enonce %}
+    <p>
+        Créez une action qui reçoit un prix dans l'URL. Créez une action qui reçoit le prix et le multiplie fois deux. Vérifiez dans la vue (pas dans le controller) que le prix ne dépasse pas 100 euros en utilisant une condition
+    </p>
+{% endblock %}
+
+{% block retour %}
+    
+    {% if prix <= 100 %}
+        <p>
+            Le prix de {{prix}}€ ne dépasse pas 100€
+        </p> 
+        {% else %}
+            <p>    
+                Le prix de {{prix}}€ dépasse 100€
+            </p>
+    {% endif %}
+    
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'exercices_vue/base_vues.html.twig' %}
+
+{% block titre %}
+<h1>
+Exercice 6
+</h1>
+{% endblock %}
+
+{% block enonce %}
+    <p>
+        Affichez la date actuelle dans la vue. Utilisez la classe DateTime et envoyez l'objet à la vue. Dans la vue, utilisez la méthode format de la classe DateTime pour afficher la date proprement
+    </p>
+{% endblock %}
+
+{% block retour %}
+    <p> 
+        Date actuelle [Format d/m/Y]:
+        {{ laDate.format ("d / m / Y") }}
+        <br>
+        Date actuelle [Format d/M/Y]:
+        {{ laDate.format ("d / M / Y") }} 
+        <br>
+        Date actuelle [Format D d/M/y]:
+        {{ laDate.format ("D d / m / y") }} 
+    </p>
+{% endblock %}
